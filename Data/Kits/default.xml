@@ -1,0 +1,14 @@
+<root>
+	<kitName>Default</kitName>
+	<kitFolder>default</kitFolder>
+	<snareDrum>
+		<drumName>SnareDrum</drumName>
+		<soundFile>snare.raw</soundFile>
+		<scanTime>4000</scanTime>
+	</snareDrum>
+	<snareDrum2>
+		<drumName>SnareDrum2</drumName>
+		<soundFile>snare.raw</soundFile>
+		<scanTime>8000</scanTime>
+	</snareDrum2>
+</root>
