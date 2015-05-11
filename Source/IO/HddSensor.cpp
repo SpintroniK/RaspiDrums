@@ -13,10 +13,15 @@ namespace IO
 	HddSensor::HddSensor(std::string filePath)
 	{
 
-		file = new std::ifstream(filePath, std::ios::in);
+		file = new std::ifstream(filePath, std::ios::in|std::ifstream::binary);
 
 		if(!file->good())
 			throw - 1;
+
+		short val;
+
+		while(file->read((char*)&val, sizeof(short)))
+			value.push_back(val);
 
 		return;
 	}

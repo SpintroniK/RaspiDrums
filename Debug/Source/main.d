@@ -1,5 +1,6 @@
-Source/main.d: ../Source/main.cpp ../Source/DrumKit/Module.h \
- ../Source/DrumKit/Kit.h /usr/include/libxml2/libxml/parser.h \
+Source/main.d: ../Source/main.cpp ../Source/IO/HddSensor.h \
+ ../Source/DrumKit/Module.h ../Source/DrumKit/Kit.h \
+ /usr/include/libxml2/libxml/parser.h \
  /usr/include/libxml2/libxml/xmlversion.h \
  /usr/include/libxml2/libxml/xmlexports.h \
  /usr/include/libxml2/libxml/tree.h \
@@ -19,6 +20,8 @@ Source/main.d: ../Source/main.cpp ../Source/DrumKit/Module.h \
  /usr/include/libxml2/libxml/threads.h ../Source/Sound/Alsa.h \
  ../Source/Sound/Mixer.h ../Source/Sound/AlsaParams.h \
  ../Source/Sound/../DrumKit/Module.h ../Source/Sound/Mixer.h
+
+../Source/IO/HddSensor.h:
 
 ../Source/DrumKit/Module.h:
 

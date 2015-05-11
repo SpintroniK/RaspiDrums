@@ -11,6 +11,8 @@
 
 #include <fstream>
 #include <string>
+#include <vector>
+#include<iterator>
 
 
 namespace IO
@@ -29,6 +31,7 @@ namespace IO
 	private:
 
 		std::ifstream* file;
+		std::vector<short> value;
 
 	};
 

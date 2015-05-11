@@ -6,9 +6,12 @@
  */
 
 
+#include "IO/HddSensor.h"
 #include "DrumKit/Module.h"
 #include "Sound/Alsa.h"
 #include "Sound/Mixer.h"
+
+#include <string>
 
 #include <unistd.h>
 
@@ -31,6 +34,10 @@ int main(int argc, char* argv[])
 
 	Sound::Mixer mixer(module.soundParameters, aParams);
 	Sound::Alsa  alsa(aParams, mixer);
+
+	std::string sensorFile("/home/jeremy/Desktop/Prog/SnareDrum/out.raw");
+
+	IO::HddSensor hddSensor(sensorFile);
 
 	alsa.Start();
 
