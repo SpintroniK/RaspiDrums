@@ -25,5 +25,6 @@ C_UPPER_DEPS :=
 SUBDIRS := \
 Source \
 Source/Sound \
+Source/IO \
 Source/DrumKit \
 
