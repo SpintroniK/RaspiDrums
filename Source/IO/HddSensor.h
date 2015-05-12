@@ -12,7 +12,9 @@
 #include <fstream>
 #include <string>
 #include <vector>
-#include<iterator>
+#include <iterator>
+#include <thread>
+#include <chrono>
 
 
 namespace IO
@@ -26,12 +28,14 @@ namespace IO
 		HddSensor(std::string filePath);
 		~HddSensor();
 
-		int GetOutput();
+		short GetOutput();
 
 	private:
 
 		std::ifstream* file;
 		std::vector<short> value;
+
+		unsigned int index;
 
 	};
 

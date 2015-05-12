@@ -11,6 +11,7 @@ namespace IO
 {
 
 	HddSensor::HddSensor(std::string filePath)
+	: index(0)
 	{
 
 		file = new std::ifstream(filePath, std::ios::in|std::ifstream::binary);
@@ -38,11 +39,17 @@ namespace IO
 
 	/// PRIVATE
 
-	int HddSensor::GetOutput()
+	short HddSensor::GetOutput()
 	{
 
+		std::this_thread::sleep_for(std::chrono::microseconds(50));
 
-		return 0;
+		short val = value[++index];
+
+		if(index == value.size())
+			index = 0;
+
+		return val;
 	}
 
 }

@@ -41,7 +41,15 @@ int main(int argc, char* argv[])
 
 	alsa.Start();
 
-	sleep(5);
+	int N = 800000;
+
+	for(int i = 0; i < N; i++)
+	{
+		short value = hddSensor.GetOutput();
+		std::cout << "\n" << value;
+		std::cout.flush();
+
+	}
 
 	alsa.Stop();
 
