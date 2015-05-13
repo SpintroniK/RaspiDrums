@@ -50,6 +50,7 @@ int main(int argc, char* argv[])
 	{
 
 		short value = hddSensor.GetOutput();
+		snareTrigger.Read(value);
 
 	}
 

@@ -23,6 +23,8 @@ namespace DrumKit
 	  maxVelocity(0)
 	{
 
+		t0 = high_resolution_clock::now();
+
 		return;
 	}
 
@@ -39,6 +41,22 @@ namespace DrumKit
 
 		// Data normalisation
 		short v = abs(value - mean);
+
+		velocity = v;
+
+		if(velocity > drum.threshold)
+		{
+
+			if(!trig)
+			{
+
+				 high_resolution_clock::time_point t = high_resolution_clock::now();
+				 unsigned long long dt = (unsigned long long) duration<double, std::micro>(t - t0).count();
+
+
+			}
+
+		}
 
 
 		return;

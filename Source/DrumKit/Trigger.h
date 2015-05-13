@@ -11,8 +11,11 @@
 #include "Kit.h"
 
 #include <chrono>
+#include <iostream>
 
 #include <math.h>
+
+using namespace std::chrono;
 
 namespace DrumKit
 {
@@ -31,6 +34,8 @@ namespace DrumKit
 	private:
 
 		Drum& drum;
+
+		high_resolution_clock::time_point t0;
 
 		short mean;
 
