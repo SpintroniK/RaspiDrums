@@ -7,6 +7,8 @@
 
 #include "Trigger.h"
 
+using namespace std::chrono;
+
 namespace DrumKit
 {
 
@@ -34,6 +36,10 @@ namespace DrumKit
 
 	void Trigger::Read(short value)
 	{
+
+		// Data normalisation
+		short v = abs(value - mean);
+
 
 		return;
 	}

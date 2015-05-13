@@ -10,6 +10,9 @@
 
 #include "Kit.h"
 
+#include <chrono>
+
+#include <math.h>
 
 namespace DrumKit
 {

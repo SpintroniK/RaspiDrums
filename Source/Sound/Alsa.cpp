@@ -256,7 +256,7 @@ namespace Sound
 			while(frames > 0)
 			{
 
-				time_point<high_resolution_clock> t_start = high_resolution_clock::now();
+				//time_point<high_resolution_clock> t_start = high_resolution_clock::now();
 
 				mixer.Mix();
 
@@ -267,12 +267,12 @@ namespace Sound
 
 				frames -= err;
 
-				time_point<high_resolution_clock>  t_end = high_resolution_clock::now();
+				//time_point<high_resolution_clock>  t_end = high_resolution_clock::now();
 
-			   std::cout << std::fixed << std::setprecision(2)
+			  /* std::cout << std::fixed << std::setprecision(2)
 			   << "Wall clock time passed: "
 			   << duration<double, std::milli>(t_end-t_start).count()
-			   << " ms\n";
+			   << " ms\n";*/
 
 			}
 
