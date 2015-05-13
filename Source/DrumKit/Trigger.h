@@ -22,11 +22,22 @@ namespace DrumKit
 		Trigger(Drum& drumParams);
 		virtual ~Trigger();
 
-		void readData(int value);
+		void Read(short value);
+		bool GetState() const { return trig; }
 
 	private:
 
 		Drum& drum;
+
+		short mean;
+
+		bool trig;
+		bool out;
+
+		long long trigTime;
+
+		short velocity;
+		short maxVelocity;
 
 	};
 

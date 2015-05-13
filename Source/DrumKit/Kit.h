@@ -20,6 +20,8 @@ namespace DrumKit
 		std::string soundFile;
 
 		int scanTime;
+		short threshold;
+		int maskTime;
 
 	};
 

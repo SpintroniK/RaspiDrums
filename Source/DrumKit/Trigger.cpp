@@ -12,7 +12,13 @@ namespace DrumKit
 
 
 	Trigger::Trigger(Drum& drumParams)
-	: drum(drumParams)
+	: drum(drumParams),
+	  mean(2046),
+	  trig(false),
+	  out(false),
+	  trigTime(0),
+	  velocity(0),
+	  maxVelocity(0)
 	{
 
 		return;
@@ -25,6 +31,12 @@ namespace DrumKit
 		return;
 	}
 
+
+	void Trigger::Read(short value)
+	{
+
+		return;
+	}
 
 }
 

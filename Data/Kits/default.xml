@@ -4,11 +4,15 @@
 	<snareDrum>
 		<drumName>SnareDrum</drumName>
 		<soundFile>snare.raw</soundFile>
-		<scanTime>4000</scanTime>
+		<scanTime>2000</scanTime>
+		<threshold>204</threshold>
+		<maskTime>40000</maskTime>
 	</snareDrum>
 	<snareDrum2>
 		<drumName>SnareDrum2</drumName>
 		<soundFile>snare.raw</soundFile>
-		<scanTime>8000</scanTime>
+		<scanTime>4000</scanTime>
+		<threshold>204</threshold>
+		<maskTime>40000</maskTime>
 	</snareDrum2>
 </root>

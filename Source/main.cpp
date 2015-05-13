@@ -8,12 +8,14 @@
 
 #include "IO/HddSensor.h"
 #include "DrumKit/Module.h"
+#include "DrumKit/Trigger.h"
 #include "Sound/Alsa.h"
 #include "Sound/Mixer.h"
 
 #include <string>
+#include <chrono>
 
-#include <unistd.h>
+using namespace std::chrono;
 
 int main(int argc, char* argv[])
 {
@@ -38,6 +40,7 @@ int main(int argc, char* argv[])
 	std::string sensorFile("/home/jeremy/Desktop/Prog/SnareDrum/out.raw");
 
 	IO::HddSensor hddSensor(sensorFile);
+	DrumKit::Trigger snareTrigger(kit.drum[0]);
 
 	alsa.Start();
 
@@ -45,9 +48,8 @@ int main(int argc, char* argv[])
 
 	for(int i = 0; i < N; i++)
 	{
+
 		short value = hddSensor.GetOutput();
-		std::cout << "\n" << value;
-		std::cout.flush();
 
 	}
 

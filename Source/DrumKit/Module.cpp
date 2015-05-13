@@ -118,7 +118,7 @@ namespace DrumKit
 
 		SoundParams sndParameters;
 
-		sndParameters.length 	= fileSize/2;
+		sndParameters.length 	= fileSize*sizeof(char)/sizeof(short);
 		sndParameters.data 		= soundData;
 		sndParameters.id 		= soundId;
 
@@ -143,6 +143,12 @@ namespace DrumKit
 
 		xmlNode* scanTime	= soundFile->next->next;
 		drum.scanTime 		= (int) std::atoi((char*) scanTime->children->content);
+
+		xmlNode* threshold 	= scanTime->next->next;
+		drum.threshold 		= (short) std::atoi((char*) threshold->children->content);
+
+		xmlNode* maskTime 	= threshold->next->next;
+		drum.maskTime 		= (int) std::atoi((char*) maskTime->children->content);
 
 		drums.push_back(drum);
 
