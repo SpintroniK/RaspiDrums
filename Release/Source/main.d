@@ -17,9 +17,10 @@ Source/main.d: ../Source/main.cpp ../Source/IO/HddSensor.h \
  /usr/include/libxml2/libxml/globals.h /usr/include/libxml2/libxml/SAX.h \
  /usr/include/libxml2/libxml/xlink.h /usr/include/libxml2/libxml/SAX2.h \
  /usr/include/libxml2/libxml/xmlmemory.h \
- /usr/include/libxml2/libxml/threads.h ../Source/Sound/Alsa.h \
- ../Source/Sound/Mixer.h ../Source/Sound/AlsaParams.h \
- ../Source/Sound/../DrumKit/Module.h ../Source/Sound/Mixer.h
+ /usr/include/libxml2/libxml/threads.h ../Source/DrumKit/Trigger.h \
+ ../Source/Sound/Alsa.h ../Source/Sound/Mixer.h \
+ ../Source/Sound/AlsaParams.h ../Source/Sound/../DrumKit/Module.h \
+ ../Source/Sound/Mixer.h
 
 ../Source/IO/HddSensor.h:
 
@@ -68,6 +69,8 @@ Source/main.d: ../Source/main.cpp ../Source/IO/HddSensor.h \
 /usr/include/libxml2/libxml/xmlmemory.h:
 
 /usr/include/libxml2/libxml/threads.h:
+
+../Source/DrumKit/Trigger.h:
 
 ../Source/Sound/Alsa.h:
 
