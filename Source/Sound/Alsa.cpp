@@ -336,6 +336,7 @@ namespace Sound
 
 		// Add definitions to dic
 		dic["SND_PCM_ACCESS_RW_INTERLEAVED"] = SND_PCM_ACCESS_RW_INTERLEAVED;
+		dic["SND_PCM_ACCESS_MMAP_INTERLEAVED"] = SND_PCM_ACCESS_MMAP_INTERLEAVED;
 
 		std::map< std::string, _snd_pcm_access>::iterator i = dic.find(accessName);
 
