@@ -55,6 +55,8 @@ namespace Sound
 		void 			StopRecord();
 		void 			Record();
 
+		int 			XrunRecovery(int err);
+
 		static void 	GetSndFormat(const char* fName, snd_pcm_format_t& format);
 		static void 	GetAccessType(const char* aName, _snd_pcm_access& access);
 

@@ -45,6 +45,7 @@ namespace Sound
 		delete[] params.buffer;
 
 		// Close pcm handle
+		snd_pcm_drop(params.handle);
 		snd_pcm_drain(params.handle);
 		snd_pcm_close(params.handle);
 
@@ -103,6 +104,7 @@ namespace Sound
 
 		snd_pcm_drop(params.handle);
 		snd_pcm_prepare(params.handle);
+		snd_pcm_start(params.handle);
 
 		if(params.capture)
 		{
@@ -265,6 +267,9 @@ namespace Sound
 				if (err == -EAGAIN)
 						continue;
 
+				if (err < 0)
+					XrunRecovery(err);
+
 				frames -= err;
 
 				//time_point<high_resolution_clock>  t_end = high_resolution_clock::now();
@@ -281,6 +286,26 @@ namespace Sound
 		}
 
 		return;
+	}
+
+	int Alsa::XrunRecovery(int err)
+	{
+
+		if (err == -EPIPE)
+		{
+			err = snd_pcm_prepare(params.handle);
+		}
+		else if (err == -ESTRPIPE)
+		{
+
+			while ((err = snd_pcm_resume(params.handle)) == -EAGAIN)
+				std::this_thread::sleep_for(milliseconds(1));
+
+			if (err < 0)
+				err = snd_pcm_prepare(params.handle);
+		}
+
+		return err;
 	}
 
 

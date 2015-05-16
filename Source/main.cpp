@@ -44,7 +44,7 @@ int main(int argc, char* argv[])
 
 	alsa.Start();
 
-	int N = 800000;
+	int N = 80000;
 
 	for(int i = 0; i < N; i++)
 	{
