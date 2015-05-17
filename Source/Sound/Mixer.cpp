@@ -33,7 +33,7 @@ namespace Sound
 		for(int i = 0; i < alsaParams.periodSize; i++)
 		{
 			alsaParams.buffer[i] = //soundParameters[1].data[alsaParams.bufferSize + i + index]/2
-								 soundParameters[0].data[alsaParams.periodSize + i + index]*10;
+								 soundParameters[0].data[i + index]*10;
 		}
 
 		index += alsaParams.periodSize;

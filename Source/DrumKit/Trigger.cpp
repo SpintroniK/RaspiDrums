@@ -76,8 +76,8 @@ namespace DrumKit
 			out = false;
 		}
 
-		std::cout << "\n" << dt << "\t"<< maxVelocity*int(out);
-		std::cout.flush();
+		//std::cout << "\n" << dt << "\t"<< maxVelocity*int(out);
+		//std::cout.flush();
 
 
 		return;

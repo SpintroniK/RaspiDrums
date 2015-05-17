@@ -4,9 +4,9 @@
 	<snareDrum>
 		<drumName>SnareDrum</drumName>
 		<soundFile>snare.raw</soundFile>
-		<scanTime>4000</scanTime>
+		<scanTime>40000</scanTime>
 		<threshold>204</threshold>
-		<maskTime>40000</maskTime>
+		<maskTime>400000</maskTime>
 	</snareDrum>
 	<snareDrum2>
 		<drumName>SnareDrum2</drumName>

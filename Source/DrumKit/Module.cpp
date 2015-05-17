@@ -12,11 +12,8 @@ namespace DrumKit
 {
 
 	Module::Module()
-	: soundParameters(sndParams),
-	  soundId(-1)
+	: Module("./")
 	{
-
-		Module("./");
 
 		return;
 	}
@@ -73,7 +70,8 @@ namespace DrumKit
 			std::string fileSound = directory + "Kits/" + kit.kitFolder + "/" + drumFileName;
 			AddSound(fileSound);
 
-			if(!newSound) getSound = false;
+			if(!newSound) 
+				getSound = false;
 
 		}
 
