@@ -36,7 +36,7 @@ namespace DrumKit
 	}
 
 
-	void Trigger::Read(short value)
+	void Trigger::Trig(short value)
 	{
 
 		// Data normalisation
@@ -44,19 +44,40 @@ namespace DrumKit
 
 		velocity = v;
 
+		// Get current time
+		high_resolution_clock::time_point t = high_resolution_clock::now();
+		unsigned long long dt = (unsigned long long) duration<double, std::micro>(t - t0).count();
+
 		if(velocity > drum.threshold)
 		{
 
 			if(!trig)
 			{
+				 trigTime = dt;
+				 trig = true;
+			}
 
-				 high_resolution_clock::time_point t = high_resolution_clock::now();
-				 unsigned long long dt = (unsigned long long) duration<double, std::micro>(t - t0).count();
+			if(maxVelocity < velocity && dt < trigTime + drum.scanTime)
+			{
+				maxVelocity = velocity;
+			}
 
-
+			if(dt > trigTime + drum.scanTime && !out)
+			{
+				out = true;
 			}
 
 		}
+
+		if(trig && dt > trigTime + drum.maskTime)
+		{
+			trig = false;
+			maxVelocity = 0;
+			out = false;
+		}
+
+		std::cout << "\n" << dt << "\t"<< maxVelocity*int(out);
+		std::cout.flush();
 
 
 		return;

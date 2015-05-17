@@ -28,7 +28,7 @@ namespace DrumKit
 		Trigger(Drum& drumParams);
 		virtual ~Trigger();
 
-		void Read(short value);
+		void Trig(short value);
 		bool GetState() const { return trig; }
 
 	private:
@@ -42,7 +42,7 @@ namespace DrumKit
 		bool trig;
 		bool out;
 
-		long long trigTime;
+		unsigned long long trigTime;
 
 		short velocity;
 		short maxVelocity;

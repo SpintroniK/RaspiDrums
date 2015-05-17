@@ -44,13 +44,13 @@ int main(int argc, char* argv[])
 
 	alsa.Start();
 
-	int N = 80000;
+	int N = 800000;
 
 	for(int i = 0; i < N; i++)
 	{
 
 		short value = hddSensor.GetOutput();
-		snareTrigger.Read(value);
+		snareTrigger.Trig(value);
 
 	}
 
