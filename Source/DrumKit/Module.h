@@ -37,8 +37,8 @@ namespace DrumKit
 
 	private:
 
-		bool GetDrumParams(xmlNode* drumName, std::vector<Drum>& drum, int drumId);
-		void AddSound(std::string fileLocation, int soundId);
+		bool GetDrumParams(xmlNode* drumName, std::vector<Drum>& drum);
+		void AddSound(std::string fileLocation, size_t soundId);
 
 		std::string directory;
 		std::vector<SoundParams> sndParams;

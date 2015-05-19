@@ -29,7 +29,7 @@ namespace DrumKit
 	Module::~Module()
 	{
 
-		for(unsigned int i = 0; i < sndParams.size(); i++)
+		for(size_t i = 0; i < sndParams.size(); i++)
 			delete[] sndParams[i].data;
 
 		sndParams.clear();
@@ -60,15 +60,17 @@ namespace DrumKit
 
 		bool getSound = true;
 
-		int drumId = 0;
-
 		while(getSound)
 		{
 
-			bool newSound = GetDrumParams(drumName, kit.drum, drumId);
+			size_t drumId = kit.drum.size();
+
+			bool newSound = GetDrumParams(drumName, kit.drum);
 
 			std::string drumFileName = kit.drum.front().soundFile;
 			std::string fileSound = directory + "Kits/" + kit.kitFolder + "/" + drumFileName;
+
+			// Sound id must match drumId (index in the kit.drum vector)
 			AddSound(fileSound, drumId);
 
 			drumId++;
@@ -90,7 +92,7 @@ namespace DrumKit
 
 	/// PRIVATE
 
-	void Module::AddSound(std::string filename, int soundId)
+	void Module::AddSound(std::string filename, size_t soundId)
 	{
 
 
@@ -131,7 +133,7 @@ namespace DrumKit
 		return;
 	}
 
-	bool Module::GetDrumParams(xmlNode* drumName, std::vector<Drum>& drums, int drumId)
+	bool Module::GetDrumParams(xmlNode* drumName, std::vector<Drum>& drums)
 	{
 
 		Drum drum;
@@ -150,7 +152,6 @@ namespace DrumKit
 		xmlNode* maskTime 	= threshold->next->next;
 		drum.maskTime 		= (int) std::atoi((char*) maskTime->children->content);
 
-		drum.id = drumId;
 
 		drums.push_back(drum);
 
