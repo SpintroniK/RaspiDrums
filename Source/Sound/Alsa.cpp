@@ -93,7 +93,6 @@ namespace Sound
 		//xmlCleanupParser();
 	    //xmlMemoryDump();
 
-		std::cout << "test";
 
 		return;
 	}
@@ -182,14 +181,10 @@ namespace Sound
 	int Alsa::SetSwParams()
 	{
 
-		int err = 0;
-
-		err = snd_pcm_sw_params_current(params.handle, params.swParams);
-		err = snd_pcm_sw_params_set_start_threshold(params.handle, params.swParams, (params.bufferSize / params.periodSize) * params.periodSize);
-		err = snd_pcm_sw_params_set_avail_min(params.handle,params.swParams, params.periodSize);
-		err = snd_pcm_sw_params(params.handle, params.swParams);
-
-		std::cout << err;
+		snd_pcm_sw_params_current(params.handle, params.swParams);
+		snd_pcm_sw_params_set_start_threshold(params.handle, params.swParams, (params.bufferSize / params.periodSize) * params.periodSize);
+		snd_pcm_sw_params_set_avail_min(params.handle,params.swParams, params.periodSize);
+		snd_pcm_sw_params(params.handle, params.swParams);
 
 		return 0;
 	}
