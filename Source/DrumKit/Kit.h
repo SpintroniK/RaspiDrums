@@ -22,6 +22,7 @@ namespace DrumKit
 		unsigned int scanTime;
 		short threshold;
 		int maskTime;
+		int id;
 
 	};
 

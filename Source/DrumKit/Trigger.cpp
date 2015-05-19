@@ -13,8 +13,9 @@ namespace DrumKit
 {
 
 
-	Trigger::Trigger(Drum& drumParams)
+	Trigger::Trigger(Drum& drumParams, Sound::Mixer& mix)
 	: drum(drumParams),
+	  mixer(mix),
 	  mean(2046),
 	  trig(false),
 	  out(false),
@@ -65,6 +66,9 @@ namespace DrumKit
 			if(dt > trigTime + drum.scanTime && !out)
 			{
 				out = true;
+
+				//!! Need to test if sound exists
+				mixer.AddToMixer(0);
 			}
 
 		}

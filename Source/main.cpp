@@ -40,7 +40,7 @@ int main(int argc, char* argv[])
 	std::string sensorFile("/home/jeremy/Desktop/Prog/SnareDrum/out.raw");
 
 	IO::HddSensor hddSensor(sensorFile);
-	DrumKit::Trigger snareTrigger(kit.drum[0]);
+	DrumKit::Trigger snareTrigger(kit.drum[0], mixer);
 
 	alsa.Start();
 

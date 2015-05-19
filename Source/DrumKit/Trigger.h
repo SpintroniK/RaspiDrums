@@ -9,6 +9,7 @@
 #define SOURCE_DRUMKIT_TRIGGER_H_
 
 #include "Kit.h"
+#include "../Sound/Mixer.h"
 
 #include <chrono>
 #include <iostream>
@@ -25,7 +26,7 @@ namespace DrumKit
 
 	public:
 
-		Trigger(Drum& drumParams);
+		Trigger(Drum& drumParams, Sound::Mixer& mix);
 		virtual ~Trigger();
 
 		void Trig(short value);
@@ -34,6 +35,8 @@ namespace DrumKit
 	private:
 
 		Drum& drum;
+		Sound::Mixer& mixer;
+
 
 		high_resolution_clock::time_point t0;
 

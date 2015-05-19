@@ -260,7 +260,7 @@ namespace Sound
 				err = snd_pcm_writei(params.handle, params.buffer, frames);
 
 				if (err == -EAGAIN)
-						continue;
+					continue;
 
 				if (err < 0)
 					XrunRecovery(err);

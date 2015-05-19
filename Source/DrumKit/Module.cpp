@@ -20,7 +20,6 @@ namespace DrumKit
 
 	Module::Module(std::string dir)
 	: soundParameters(sndParams),
-	  soundId(-1),
 	  directory(dir)
 	{
 
@@ -61,14 +60,18 @@ namespace DrumKit
 
 		bool getSound = true;
 
+		int drumId = 0;
+
 		while(getSound)
 		{
 
-			bool newSound = GetDrumParams(drumName, kit.drum);
+			bool newSound = GetDrumParams(drumName, kit.drum, drumId);
 
 			std::string drumFileName = kit.drum.front().soundFile;
 			std::string fileSound = directory + "Kits/" + kit.kitFolder + "/" + drumFileName;
-			AddSound(fileSound);
+			AddSound(fileSound, drumId);
+
+			drumId++;
 
 			if(!newSound) 
 				getSound = false;
@@ -87,10 +90,9 @@ namespace DrumKit
 
 	/// PRIVATE
 
-	void Module::AddSound(std::string filename)
+	void Module::AddSound(std::string filename, int soundId)
 	{
 
-		soundId++;
 
 		// Get file location
 		std::string fileLocation(filename);
@@ -129,7 +131,7 @@ namespace DrumKit
 		return;
 	}
 
-	bool Module::GetDrumParams(xmlNode* drumName, std::vector<Drum>& drums)
+	bool Module::GetDrumParams(xmlNode* drumName, std::vector<Drum>& drums, int drumId)
 	{
 
 		Drum drum;
@@ -147,6 +149,8 @@ namespace DrumKit
 
 		xmlNode* maskTime 	= threshold->next->next;
 		drum.maskTime 		= (int) std::atoi((char*) maskTime->children->content);
+
+		drum.id = drumId;
 
 		drums.push_back(drum);
 

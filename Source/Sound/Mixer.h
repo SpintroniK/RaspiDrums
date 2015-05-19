@@ -9,10 +9,13 @@
 #define MIXER_H_
 
 #include "AlsaParams.h"
+#include "SoundPlay.h"
 #include "../DrumKit/Module.h"
 
+#include <vector>
 #include <thread>
 #include <chrono>
+#include <iostream>
 
 namespace Sound
 {
@@ -22,19 +25,19 @@ namespace Sound
 
 	public:
 
-		Mixer(const std::vector<DrumKit::SoundParams>& soundParams, AlsaParams& params);
+		Mixer(const std::vector<DrumKit::SoundParams>& soundParams, const AlsaParams& params);
 		virtual ~Mixer();
 
 		void Mix();
+		void AddToMixer(int id);
 
 	private:
 
 		const std::vector<DrumKit::SoundParams>& soundParameters;
 
-		AlsaParams& 	alsaParams;
+		const AlsaParams& alsaParams;
 
-		unsigned int index;
-
+		std::vector<SoundPlay> soundList;
 
 	};
 

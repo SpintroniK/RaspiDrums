@@ -10,10 +10,9 @@
 namespace Sound
 {
 
-	Mixer::Mixer(const std::vector<DrumKit::SoundParams>& soundParams, AlsaParams& params)
+	Mixer::Mixer(const std::vector<DrumKit::SoundParams>& soundParams, const AlsaParams& params)
 	: soundParameters(soundParams),
-	  alsaParams(params),
-	  index(0)
+	  alsaParams(params)
 	{
 
 		return;
@@ -26,21 +25,46 @@ namespace Sound
 		return;
 	}
 
+	void Mixer::AddToMixer(int id)
+	{
+
+		SoundPlay soundToPlay;
+
+		soundToPlay.id = id;
+		soundToPlay.index = 0;
+
+		soundList.push_back(soundToPlay);
+
+		return;
+	}
+
 
 	void Mixer::Mix()
 	{
 
-		for(int i = 0; i < alsaParams.periodSize; i++)
+
+		if(soundList.size() == 0)
 		{
-			alsaParams.buffer[i] = //soundParameters[1].data[alsaParams.bufferSize + i + index]/2
-								 soundParameters[0].data[i + index]*10;
+			// No sound to mix, fill with zeros
+			for(int i = 0; i < alsaParams.periodSize; i++)
+			{
+				alsaParams.buffer[i] = 0;
+			}
+
+		}
+		else
+		{
+
+
+
+
 		}
 
-		index += alsaParams.periodSize;
-		if(index >= soundParameters[0].length) index = 0;
+
 
 		return;
 	}
+
 
 
 
