@@ -12,7 +12,8 @@ namespace DrumKit
 {
 
 	Module::Module()
-	: Module("./")
+	: soundParameters(sndParams),
+	  directory("./")
 	{
 
 		return;

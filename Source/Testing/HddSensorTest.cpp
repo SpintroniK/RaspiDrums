@@ -22,7 +22,8 @@ namespace Testing
 		for(int i = 0; i < N; i++)
 		{
 
-
+			short value = sensor.GetOutput();
+			std::cout << value << std::endl;
 
 		}
 

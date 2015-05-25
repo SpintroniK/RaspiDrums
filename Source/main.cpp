@@ -11,7 +11,8 @@
 int main(int argc, char* argv[])
 {
 
-	Testing::DrumKit_HddTest::RunTest();
+	//Testing::DrumKit_HddTest::RunTest();
+	Testing::HddSensorTest::RunTest();
 
 	return 0;
 }

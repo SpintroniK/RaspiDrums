@@ -11,6 +11,7 @@
 #include "../IO/HddSensor.h"
 
 #include <string>
+#include <iostream>
 
 namespace Testing
 {
