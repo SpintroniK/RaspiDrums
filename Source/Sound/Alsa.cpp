@@ -272,7 +272,7 @@ namespace Sound
 			  /* std::cout << std::fixed << std::setprecision(2)
 			   << "Wall clock time passed: "
 			   << duration<double, std::milli>(t_end-t_start).count()
-			   << " ms\n";*/
+			   << " ms" << endl;*/
 
 			}
 

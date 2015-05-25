@@ -1,6 +1,7 @@
 Source/Sound/Mixer.d: ../Source/Sound/Mixer.cpp ../Source/Sound/Mixer.h \
- ../Source/Sound/AlsaParams.h ../Source/Sound/../DrumKit/Module.h \
- ../Source/Sound/../DrumKit/Kit.h /usr/include/libxml2/libxml/parser.h \
+ ../Source/Sound/AlsaParams.h ../Source/Sound/SoundPlay.h \
+ ../Source/Sound/../DrumKit/Module.h ../Source/Sound/../DrumKit/Kit.h \
+ /usr/include/libxml2/libxml/parser.h \
  /usr/include/libxml2/libxml/xmlversion.h \
  /usr/include/libxml2/libxml/xmlexports.h \
  /usr/include/libxml2/libxml/tree.h \
@@ -22,6 +23,8 @@ Source/Sound/Mixer.d: ../Source/Sound/Mixer.cpp ../Source/Sound/Mixer.h \
 ../Source/Sound/Mixer.h:
 
 ../Source/Sound/AlsaParams.h:
+
+../Source/Sound/SoundPlay.h:
 
 ../Source/Sound/../DrumKit/Module.h:
 

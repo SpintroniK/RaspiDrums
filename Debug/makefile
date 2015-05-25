@@ -8,6 +8,7 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include Source/Testing/subdir.mk
 -include Source/Sound/subdir.mk
 -include Source/IO/subdir.mk
 -include Source/DrumKit/subdir.mk

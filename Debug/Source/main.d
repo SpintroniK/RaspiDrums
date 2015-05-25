@@ -1,5 +1,6 @@
-Source/main.d: ../Source/main.cpp ../Source/IO/HddSensor.h \
- ../Source/DrumKit/Module.h ../Source/DrumKit/Kit.h \
+Source/main.d: ../Source/main.cpp ../Source/Testing/DrumKit_HddTest.h \
+ ../Source/Testing/../IO/HddSensor.h \
+ ../Source/Testing/../DrumKit/Module.h ../Source/Testing/../DrumKit/Kit.h \
  /usr/include/libxml2/libxml/parser.h \
  /usr/include/libxml2/libxml/xmlversion.h \
  /usr/include/libxml2/libxml/xmlexports.h \
@@ -17,19 +18,23 @@ Source/main.d: ../Source/main.cpp ../Source/IO/HddSensor.h \
  /usr/include/libxml2/libxml/globals.h /usr/include/libxml2/libxml/SAX.h \
  /usr/include/libxml2/libxml/xlink.h /usr/include/libxml2/libxml/SAX2.h \
  /usr/include/libxml2/libxml/xmlmemory.h \
- /usr/include/libxml2/libxml/threads.h ../Source/DrumKit/Trigger.h \
- ../Source/DrumKit/../Sound/Mixer.h \
- ../Source/DrumKit/../Sound/AlsaParams.h \
- ../Source/DrumKit/../Sound/SoundPlay.h \
- ../Source/DrumKit/../Sound/../DrumKit/Module.h ../Source/Sound/Alsa.h \
- ../Source/Sound/Mixer.h ../Source/Sound/AlsaParams.h \
- ../Source/Sound/Mixer.h
+ /usr/include/libxml2/libxml/threads.h \
+ ../Source/Testing/../DrumKit/Trigger.h \
+ ../Source/Testing/../DrumKit/../Sound/Mixer.h \
+ ../Source/Testing/../DrumKit/../Sound/AlsaParams.h \
+ ../Source/Testing/../DrumKit/../Sound/SoundPlay.h \
+ ../Source/Testing/../DrumKit/../Sound/../DrumKit/Module.h \
+ ../Source/Testing/../Sound/Alsa.h ../Source/Testing/../Sound/Mixer.h \
+ ../Source/Testing/../Sound/AlsaParams.h \
+ ../Source/Testing/../Sound/Mixer.h ../Source/Testing/HddSensorTest.h
 
-../Source/IO/HddSensor.h:
+../Source/Testing/DrumKit_HddTest.h:
 
-../Source/DrumKit/Module.h:
+../Source/Testing/../IO/HddSensor.h:
 
-../Source/DrumKit/Kit.h:
+../Source/Testing/../DrumKit/Module.h:
+
+../Source/Testing/../DrumKit/Kit.h:
 
 /usr/include/libxml2/libxml/parser.h:
 
@@ -73,20 +78,22 @@ Source/main.d: ../Source/main.cpp ../Source/IO/HddSensor.h \
 
 /usr/include/libxml2/libxml/threads.h:
 
-../Source/DrumKit/Trigger.h:
+../Source/Testing/../DrumKit/Trigger.h:
 
-../Source/DrumKit/../Sound/Mixer.h:
+../Source/Testing/../DrumKit/../Sound/Mixer.h:
 
-../Source/DrumKit/../Sound/AlsaParams.h:
+../Source/Testing/../DrumKit/../Sound/AlsaParams.h:
 
-../Source/DrumKit/../Sound/SoundPlay.h:
+../Source/Testing/../DrumKit/../Sound/SoundPlay.h:
 
-../Source/DrumKit/../Sound/../DrumKit/Module.h:
+../Source/Testing/../DrumKit/../Sound/../DrumKit/Module.h:
 
-../Source/Sound/Alsa.h:
+../Source/Testing/../Sound/Alsa.h:
 
-../Source/Sound/Mixer.h:
+../Source/Testing/../Sound/Mixer.h:
 
-../Source/Sound/AlsaParams.h:
+../Source/Testing/../Sound/AlsaParams.h:
 
-../Source/Sound/Mixer.h:
+../Source/Testing/../Sound/Mixer.h:
+
+../Source/Testing/HddSensorTest.h:

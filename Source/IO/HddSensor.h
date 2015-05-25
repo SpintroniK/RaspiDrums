@@ -29,6 +29,7 @@ namespace IO
 		~HddSensor();
 
 		short GetOutput();
+		int GetDataLength() { return value.size(); }
 
 	private:
 
