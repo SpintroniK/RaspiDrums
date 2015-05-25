@@ -13,6 +13,8 @@
 #include "../DrumKit/Module.h"
 
 #include <vector>
+#include <algorithm>
+#include <iterator>
 #include <thread>
 #include <chrono>
 #include <iostream>

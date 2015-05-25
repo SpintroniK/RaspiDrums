@@ -139,6 +139,8 @@ namespace DrumKit
 
 		Drum drum;
 
+		drum.id 			= drums.size();
+
 		drum.drumName 		= std::string((char*) drumName->children->content);
 
 		xmlNode* soundFile 	= drumName->next->next;

@@ -16,6 +16,9 @@ namespace DrumKit
 
 	struct Drum
 	{
+
+		int id;
+
 		std::string drumName;
 		std::string soundFile;
 

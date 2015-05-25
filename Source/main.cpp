@@ -12,9 +12,9 @@
 int main(int argc, char* argv[])
 {
 
-	//Testing::DrumKit_HddTest::RunTest();
+	Testing::DrumKit_HddTest::RunTest();
 	//Testing::HddSensorTest::RunTest();
-	Testing::SensorTest::RunTest();
+	//Testing::SensorTest::RunTest();
 
 	return 0;
 }

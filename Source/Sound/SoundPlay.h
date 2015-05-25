@@ -15,7 +15,7 @@ namespace Sound
 	struct SoundPlay
 	{
 		int id;
-		int index;
+		unsigned int index;
 	};
 
 

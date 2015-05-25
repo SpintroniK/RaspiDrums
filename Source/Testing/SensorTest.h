@@ -26,7 +26,7 @@ namespace Testing
 	private:
 
 		SensorTest() {};
-		~SensorTest() {};
+		virtual ~SensorTest() {};
 
 	};
 

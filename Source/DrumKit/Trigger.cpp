@@ -66,9 +66,7 @@ namespace DrumKit
 			if(dt > trigTime + drum.scanTime && !out)
 			{
 				out = true;
-
-				//!! Need to test if sound exists
-				mixer.AddToMixer(0);
+				mixer.AddToMixer(drum.id);
 			}
 
 		}

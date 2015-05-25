@@ -28,12 +28,30 @@ namespace Sound
 	void Mixer::AddToMixer(int id)
 	{
 
-		SoundPlay soundToPlay;
+		// Test if sound is already in the mixer (need to include <algorithm>)
+		std::vector<SoundPlay>::iterator iter =	std::find_if(soundList.begin(), soundList.end(),
+				[id](const SoundPlay& sound) { return sound.id == id; });
 
-		soundToPlay.id = id;
-		soundToPlay.index = 0;
+		// If the sound exists in the list, find its index
+		size_t i = std::distance(soundList.begin(), iter);
 
-		soundList.push_back(soundToPlay);
+		if(i != soundList.size())
+		{
+			// The sound is already in the sound list, so we set its playing index to zero to restart it
+			soundList[i].index = 0;
+
+		}
+		else
+		{
+			// The sound needs to be added to the sound list
+
+			SoundPlay soundToPlay;
+
+			soundToPlay.id = id;
+			soundToPlay.index = 0;
+
+			soundList.push_back(soundToPlay);
+		}
 
 		return;
 	}
@@ -43,21 +61,30 @@ namespace Sound
 	{
 
 
-		if(soundList.size() == 0)
+		// Fill buffer with zeros
+		std::fill(alsaParams.buffer, alsaParams.buffer + alsaParams.periodSize, 0);
+
+		// If there are sounds to mix
+		if(soundList.size() > 0)
 		{
-			// No sound to mix, fill with zeros
-			for(int i = 0; i < alsaParams.periodSize; i++)
+			// Browse sound list
+			for(size_t id = 0; id < soundList.size(); id++)
 			{
-				alsaParams.buffer[i] = 0;
+				// Mix sound
+				for(int i = 0; i < alsaParams.periodSize; i++)
+				{
+					alsaParams.buffer[i] += soundParameters[id].data[soundList[id].index + i];
+				}
+
+				// Update sound index
+				soundList[id].index += alsaParams.periodSize;
+
+				// Reached the end of the sound sample, so delete it from the vector
+				if(soundList[id].index >= soundParameters[id].length)
+				{
+					soundList.erase(soundList.begin() + id);
+				}
 			}
-
-		}
-		else
-		{
-
-
-
-
 		}
 
 

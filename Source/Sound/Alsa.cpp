@@ -257,6 +257,7 @@ namespace Sound
 
 				mixer.Mix();
 
+
 				err = snd_pcm_writei(params.handle, params.buffer, frames);
 
 				if (err == -EAGAIN)
@@ -272,7 +273,7 @@ namespace Sound
 			  /* std::cout << std::fixed << std::setprecision(2)
 			   << "Wall clock time passed: "
 			   << duration<double, std::milli>(t_end-t_start).count()
-			   << " ms" << endl;*/
+			   << " ms" << std::endl;*/
 
 			}
 

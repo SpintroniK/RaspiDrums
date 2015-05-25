@@ -15,11 +15,13 @@ namespace Testing
 
 
 		std::string workingDirectory("/home/jeremy/Desktop/Prog/SnareDrum/Data/");
+		std::string kitLocation(workingDirectory + "Kits/default.xml");
+
 
 		DrumKit::Kit kit;
 
 		DrumKit::Module module(workingDirectory);
-		module.LoadKit(workingDirectory + "Kits/default.xml", kit);
+		module.LoadKit(kitLocation, kit);
 
 
 		std::string xmlFileLoc(workingDirectory + "alsaConfig.xml");
