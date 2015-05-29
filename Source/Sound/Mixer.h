@@ -15,9 +15,9 @@
 #include <vector>
 #include <algorithm>
 #include <iterator>
-#include <thread>
 #include <chrono>
 #include <iostream>
+#include <mutex>
 
 namespace Sound
 {
@@ -36,8 +36,9 @@ namespace Sound
 	private:
 
 		const std::vector<DrumKit::SoundParams>& soundParameters;
-
 		const AlsaParams& alsaParams;
+
+		mutable std::mutex mixerMutex;
 
 		std::vector<SoundPlay> soundList;
 

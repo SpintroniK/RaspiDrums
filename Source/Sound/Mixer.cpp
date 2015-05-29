@@ -28,16 +28,19 @@ namespace Sound
 	void Mixer::AddToMixer(int id)
 	{
 
-		// Test if sound is already in the mixer (need to include <algorithm>)
+		// Prevent other threads to alter the soundList vector
+		std::lock_guard<std::mutex> lock(mixerMutex);
+
+		// Test if the sound has already been added to the mixer 
 		std::vector<SoundPlay>::iterator iter =	std::find_if(soundList.begin(), soundList.end(),
 				[id](const SoundPlay& sound) { return sound.id == id; });
 
-		// If the sound exists in the list, find its index
+		// Find sound's position in the vector
 		size_t i = std::distance(soundList.begin(), iter);
 
 		if(i != soundList.size())
 		{
-			// The sound is already in the sound list, so we set its playing index to zero to restart it
+			// The sound is already in the sound list, so we need to rewind it
 			soundList[i].index = 0;
 
 		}
@@ -60,6 +63,8 @@ namespace Sound
 	void Mixer::Mix()
 	{
 
+		// Prevent other threads to alter the soundList vector
+		std::lock_guard<std::mutex> lock(mixerMutex);
 
 		// Fill buffer with zeros
 		std::fill(alsaParams.buffer, alsaParams.buffer + alsaParams.periodSize, 0);
