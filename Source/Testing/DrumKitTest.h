@@ -5,8 +5,8 @@
  *      Author: jeremy
  */
 
-#ifndef SOURCE_TESTING_DRUMKITTEST_H_
-#define SOURCE_TESTING_DRUMKITTEST_H_
+#ifndef RASPIDRUMS_SOURCE_TESTING_DRUMKITTEST_H_
+#define RASPIDRUMS_SOURCE_TESTING_DRUMKITTEST_H_
 
 
 #include "../IO/Sensor.h"
@@ -39,4 +39,4 @@ namespace Testing
 }
 
 
-#endif /* SOURCE_TESTING_DRUMKITTEST_H_ */
+#endif /* RASPIDRUMS_SOURCE_TESTING_DRUMKITTEST_H_ */

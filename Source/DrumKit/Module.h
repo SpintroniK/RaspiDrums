@@ -5,8 +5,8 @@
  *      Author: jeremy
  */
 
-#ifndef SOURCE_DRUMKIT_MODULE_H_
-#define SOURCE_DRUMKIT_MODULE_H_
+#ifndef RASPIDRUMS_SOURCE_DRUMKIT_MODULE_H_
+#define RASPIDRUMS_SOURCE_DRUMKIT_MODULE_H_
 
 #include "Kit.h"
 
@@ -48,4 +48,4 @@ namespace DrumKit
 
 }
 
-#endif /* SOURCE_DRUMKIT_MODULE_H_ */
+#endif /* RASPIDRUMS_SOURCE_DRUMKIT_MODULE_H_ */

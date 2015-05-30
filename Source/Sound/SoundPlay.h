@@ -5,8 +5,8 @@
  *      Author: jeremy
  */
 
-#ifndef SOURCE_SOUND_SOUNDPLAY_H_
-#define SOURCE_SOUND_SOUNDPLAY_H_
+#ifndef RASPIDRUMS_SOURCE_SOUND_SOUNDPLAY_H_
+#define RASPIDRUMS_SOURCE_SOUND_SOUNDPLAY_H_
 
 
 namespace Sound
@@ -22,4 +22,4 @@ namespace Sound
 }
 
 
-#endif /* SOURCE_SOUND_SOUNDPLAY_H_ */
+#endif /* RASPIDRUMS_SOURCE_SOUND_SOUNDPLAY_H_ */

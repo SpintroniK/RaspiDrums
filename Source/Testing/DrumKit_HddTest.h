@@ -5,8 +5,8 @@
  *      Author: jeremy
  */
 
-#ifndef SOURCE_TESTING_DRUMKIT_HDDTEST_H_
-#define SOURCE_TESTING_DRUMKIT_HDDTEST_H_
+#ifndef RASPIDRUMS_SOURCE_TESTING_DRUMKIT_HDDTEST_H_
+#define RASPIDRUMS_SOURCE_TESTING_DRUMKIT_HDDTEST_H_
 
 #include "../IO/HddSensor.h"
 #include "../DrumKit/Module.h"
@@ -38,4 +38,4 @@ namespace Testing
 
 
 
-#endif /* SOURCE_TESTING_DRUMKIT_HDDTEST_H_ */
+#endif /* RASPIDRUMS_SOURCE_TESTING_DRUMKIT_HDDTEST_H_ */

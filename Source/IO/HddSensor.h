@@ -5,8 +5,8 @@
  *      Author: jeremy
  */
 
-#ifndef SOURCE_IO_HDDSENSOR_H_
-#define SOURCE_IO_HDDSENSOR_H_
+#ifndef RASPIDRUMS_SOURCE_IO_HDDSENSOR_H_
+#define RASPIDRUMS_SOURCE_IO_HDDSENSOR_H_
 
 
 #include <fstream>
@@ -42,4 +42,4 @@ namespace IO
 
 }
 
-#endif /* SOURCE_IO_HDDSENSOR_H_ */
+#endif /* RASPIDRUMS_SOURCE_IO_HDDSENSOR_H_ */

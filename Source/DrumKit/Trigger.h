@@ -5,8 +5,8 @@
  *      Author: jeremy
  */
 
-#ifndef SOURCE_DRUMKIT_TRIGGER_H_
-#define SOURCE_DRUMKIT_TRIGGER_H_
+#ifndef RASPIDRUMS_SOURCE_DRUMKIT_TRIGGER_H_
+#define RASPIDRUMS_SOURCE_DRUMKIT_TRIGGER_H_
 
 #include "Kit.h"
 #include "../Sound/Mixer.h"
@@ -56,4 +56,4 @@ namespace DrumKit
 
 }
 
-#endif /* SOURCE_DRUMKIT_TRIGGER_H_ */
+#endif /* RASPIDRUMS_SOURCE_DRUMKIT_TRIGGER_H_ */

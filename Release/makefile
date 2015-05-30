@@ -42,19 +42,19 @@ endif
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: SnareDrum
+all: RaspiDrums
 
 # Tool invocations
-SnareDrum: $(OBJS) $(USER_OBJS)
+RaspiDrums: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: Cross G++ Linker'
-	g++  -o "SnareDrum" $(OBJS) $(USER_OBJS) $(LIBS)
+	g++  -o "RaspiDrums" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(C++_DEPS)$(OBJS)$(C_DEPS)$(CC_DEPS)$(CPP_DEPS)$(EXECUTABLES)$(CXX_DEPS)$(C_UPPER_DEPS) SnareDrum
+	-$(RM) $(C++_DEPS)$(OBJS)$(C_DEPS)$(CC_DEPS)$(CPP_DEPS)$(EXECUTABLES)$(CXX_DEPS)$(C_UPPER_DEPS) RaspiDrums
 	-@echo ' '
 
 .PHONY: all clean dependents

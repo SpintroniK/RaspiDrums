@@ -5,8 +5,8 @@
  *      Author: jeremy
  */
 
-#ifndef SOURCE_IO_SENSOR_H_
-#define SOURCE_IO_SENSOR_H_
+#ifndef RASPIDRUMS_SOURCE_IO_SENSOR_H_
+#define RASPIDRUMS_SOURCE_IO_SENSOR_H_
 
 
 #include <bcm2835.h>
@@ -37,4 +37,4 @@ namespace IO
 
 }
 
-#endif /* SOURCE_IO_SENSOR_H_ */
+#endif /* RASPIDRUMS_SOURCE_IO_SENSOR_H_ */

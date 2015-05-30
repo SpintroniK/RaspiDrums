@@ -5,8 +5,8 @@
  *      Author: jeremy
  */
 
-#ifndef SOURCE_SOUND_ALSAPARAMS_H_
-#define SOURCE_SOUND_ALSAPARAMS_H_
+#ifndef RASPIDRUMS_SOURCE_SOUND_ALSAPARAMS_H_
+#define RASPIDRUMS_SOURCE_SOUND_ALSAPARAMS_H_
 
 
 #include "alsa/asoundlib.h"
@@ -42,4 +42,4 @@ namespace Sound
 
 }
 
-#endif /* SOURCE_SOUND_ALSAPARAMS_H_ */
+#endif /* RASPIDRUMS_SOURCE_SOUND_ALSAPARAMS_H_ */

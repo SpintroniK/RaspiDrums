@@ -5,8 +5,8 @@
  *      Author: jeremy
  */
 
-#ifndef SOURCE_DRUMKIT_KIT_H_
-#define SOURCE_DRUMKIT_KIT_H_
+#ifndef RASPIDRUMS_SOURCE_DRUMKIT_KIT_H_
+#define RASPIDRUMS_SOURCE_DRUMKIT_KIT_H_
 
 #include <string>
 #include <vector>
@@ -48,4 +48,4 @@ namespace DrumKit
 
 }
 
-#endif /* SOURCE_DRUMKIT_KIT_H_ */
+#endif /* RASPIDRUMS_SOURCE_DRUMKIT_KIT_H_ */
