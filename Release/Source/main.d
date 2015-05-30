@@ -1,7 +1,6 @@
-Source/main.d: ../Source/main.cpp ../Source/Testing/DrumKit_HddTest.h \
- ../Source/Testing/../IO/HddSensor.h \
- ../Source/Testing/../DrumKit/Module.h ../Source/Testing/../DrumKit/Kit.h \
- /usr/include/libxml2/libxml/parser.h \
+Source/main.d: ../Source/main.cpp ../Source/Testing/DrumKitTest.h \
+ ../Source/Testing/../IO/Sensor.h ../Source/Testing/../DrumKit/Module.h \
+ ../Source/Testing/../DrumKit/Kit.h /usr/include/libxml2/libxml/parser.h \
  /usr/include/libxml2/libxml/xmlversion.h \
  /usr/include/libxml2/libxml/xmlexports.h \
  /usr/include/libxml2/libxml/tree.h \
@@ -26,12 +25,13 @@ Source/main.d: ../Source/main.cpp ../Source/Testing/DrumKit_HddTest.h \
  ../Source/Testing/../DrumKit/../Sound/../DrumKit/Module.h \
  ../Source/Testing/../Sound/Alsa.h ../Source/Testing/../Sound/Mixer.h \
  ../Source/Testing/../Sound/AlsaParams.h \
- ../Source/Testing/../Sound/Mixer.h ../Source/Testing/HddSensorTest.h \
- ../Source/Testing/SensorTest.h ../Source/Testing/../IO/Sensor.h
+ ../Source/Testing/../Sound/Mixer.h ../Source/Testing/DrumKit_HddTest.h \
+ ../Source/Testing/../IO/HddSensor.h ../Source/Testing/HddSensorTest.h \
+ ../Source/Testing/SensorTest.h
 
-../Source/Testing/DrumKit_HddTest.h:
+../Source/Testing/DrumKitTest.h:
 
-../Source/Testing/../IO/HddSensor.h:
+../Source/Testing/../IO/Sensor.h:
 
 ../Source/Testing/../DrumKit/Module.h:
 
@@ -97,8 +97,10 @@ Source/main.d: ../Source/main.cpp ../Source/Testing/DrumKit_HddTest.h \
 
 ../Source/Testing/../Sound/Mixer.h:
 
+../Source/Testing/DrumKit_HddTest.h:
+
+../Source/Testing/../IO/HddSensor.h:
+
 ../Source/Testing/HddSensorTest.h:
 
 ../Source/Testing/SensorTest.h:
-
-../Source/Testing/../IO/Sensor.h:

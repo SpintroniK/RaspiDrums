@@ -5,6 +5,7 @@
  *      Author: jeremy
  */
 
+#include "Testing/DrumKitTest.h"
 #include "Testing/DrumKit_HddTest.h"
 #include "Testing/HddSensorTest.h"
 #include "Testing/SensorTest.h"
@@ -12,7 +13,8 @@
 int main(int argc, char* argv[])
 {
 
-	Testing::DrumKit_HddTest::RunTest();
+	Testing::DrumKitTest::RunTest();
+	//Testing::DrumKit_HddTest::RunTest();
 	//Testing::HddSensorTest::RunTest();
 	//Testing::SensorTest::RunTest();
 
