@@ -13,8 +13,8 @@
 int main(int argc, char* argv[])
 {
 
-	Testing::DrumKitTest::RunTest();
-	//Testing::DrumKit_HddTest::RunTest();
+	//Testing::DrumKitTest::RunTest();
+	Testing::DrumKit_HddTest::RunTest();
 	//Testing::HddSensorTest::RunTest();
 	//Testing::SensorTest::RunTest();
 

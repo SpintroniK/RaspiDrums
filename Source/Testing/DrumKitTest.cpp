@@ -16,7 +16,7 @@ namespace Testing
 	{
 
 
-		std::string workingDirectory("/home/jeremy/Desktop/Prog/SnareDrum/Data/");
+		std::string workingDirectory("/home/jeremy/Desktop/Prog/RaspiDrums/Data/");
 		std::string kitLocation(workingDirectory + "Kits/default.xml");
 
 

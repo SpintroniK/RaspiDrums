@@ -13,7 +13,7 @@ namespace Testing
 	void HddSensorTest::RunTest()
 	{
 
-		std::string fileLoc("/home/jeremy/Desktop/Prog/SnareDrum/out.raw");
+		std::string fileLoc("/home/jeremy/Desktop/Prog/RaspiDrums/out.raw");
 
 		IO::HddSensor sensor(fileLoc);
 
