@@ -47,8 +47,10 @@ namespace Testing
 		high_resolution_clock::time_point tStart = high_resolution_clock::now();
 		unsigned long long dt = 0;
 
-		do
+
+		while(dt < 10*1000)
 		{
+
 			high_resolution_clock::time_point t = high_resolution_clock::now();
 			dt = (unsigned long long) duration<double, std::milli>(t - tStart).count();
 
@@ -57,7 +59,6 @@ namespace Testing
 			snareTrigger.Trig(value);
 
 		}
-		while(dt < 10*1000);
 
 
 		alsa.Stop();

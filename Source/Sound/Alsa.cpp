@@ -45,7 +45,7 @@ namespace Sound
 		delete[] params.buffer;
 
 		// Close pcm handle
-		snd_pcm_drop(params.handle);
+		//snd_pcm_drop(params.handle);
 		snd_pcm_drain(params.handle);
 		snd_pcm_close(params.handle);
 
