@@ -11,7 +11,7 @@
 namespace IO
 {
 
-	Sensor::Sensor(int chan)
+	Sensor::Sensor(char chan)
 	: channel(chan)
 	{
 
@@ -50,19 +50,16 @@ namespace IO
 	short Sensor::GetOutput()
 	{
 
-		// Declare date buffer
-		char data[3];
-
 		// Select SPI channel
-		data[0] = 0b11100000 | ((char) (channel << 3)) ;
+		char data = 0b11100000 | (channel << 3);
 
-		char mosi[3] = {data[0]};
+		char mosi[3] = {data};
 		char miso[3] = {0};
 
 		// Receive data
 		bcm2835_spi_transfernb(mosi, miso, 3);
 
-		// Organise bits
+		// Calculate value from received bits
 		short value = ((miso[0] & 0x01) << 11) | (miso[1] << 3) | ((miso[2] >> 5) & 0x07);
 
 		return value;

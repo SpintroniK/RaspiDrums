@@ -32,8 +32,8 @@ namespace Sound
 		std::lock_guard<std::mutex> lock(mixerMutex);
 
 		// Test if the sound has already been added to the mixer 
-		std::vector<SoundPlay>::iterator iter =	std::find_if(soundList.begin(), soundList.end(),
-				[id](const SoundPlay& sound) { return sound.id == id; });
+		std::vector<SoundInfo>::iterator iter =	std::find_if(soundList.begin(), soundList.end(),
+				[id](const SoundInfo& sound) { return sound.id == id; });
 
 		// Find sound's position in the vector
 		size_t i = std::distance(soundList.begin(), iter);
@@ -48,12 +48,12 @@ namespace Sound
 		{
 			// The sound needs to be added to the sound list
 
-			SoundPlay soundToPlay;
+			SoundInfo sound;
 
-			soundToPlay.id = id;
-			soundToPlay.index = 0;
+			sound.id = id;
+			sound.index = 0;
 
-			soundList.push_back(soundToPlay);
+			soundList.push_back(sound);
 		}
 
 		return;

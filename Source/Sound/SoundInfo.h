@@ -12,10 +12,11 @@
 namespace Sound
 {
 
-	struct SoundPlay
+	struct SoundInfo
 	{
 		int id;
 		unsigned int index;
+		float volume;
 	};
 
 

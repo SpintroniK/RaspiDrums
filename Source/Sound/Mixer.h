@@ -9,7 +9,6 @@
 #define MIXER_H_
 
 #include "AlsaParams.h"
-#include "SoundPlay.h"
 #include "../DrumKit/Module.h"
 
 #include <vector>
@@ -18,6 +17,7 @@
 #include <chrono>
 #include <iostream>
 #include <mutex>
+#include "SoundInfo.h"
 
 namespace Sound
 {
@@ -40,7 +40,7 @@ namespace Sound
 
 		mutable std::mutex mixerMutex;
 
-		std::vector<SoundPlay> soundList;
+		std::vector<SoundInfo> soundList;
 
 	};
 

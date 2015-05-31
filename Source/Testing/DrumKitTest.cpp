@@ -37,7 +37,7 @@ namespace Testing
 
 		std::string sensorFile(workingDirectory + "../out.raw");
 
-		int channel = 0;
+		char channel = 0;
 		IO::Sensor sensor(channel);
 
 		DrumKit::Trigger snareTrigger(kit.drum[0], mixer);

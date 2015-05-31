@@ -21,7 +21,7 @@ namespace IO
 	{
 
 	public:
-		Sensor(int channel);
+		Sensor(char channel);
 		virtual ~Sensor();
 
 		short GetOutput();
@@ -29,7 +29,7 @@ namespace IO
 
 	private:
 
-		int channel;
+		char channel;
 
 	};
 
