@@ -25,7 +25,7 @@ namespace Sound
 		return;
 	}
 
-	void Mixer::AddToMixer(int id)
+	void Mixer::AddToMixer(int id, float volume)
 	{
 
 		// Prevent other threads to alter the soundList vector
@@ -52,6 +52,7 @@ namespace Sound
 
 			sound.id = id;
 			sound.index = 0;
+			sound.volume = volume;
 
 			soundList.push_back(sound);
 		}
@@ -78,7 +79,7 @@ namespace Sound
 				// Mix sound
 				for(int i = 0; i < alsaParams.periodSize; i++)
 				{
-					alsaParams.buffer[i] += soundParameters[id].data[soundList[id].index + i];
+					alsaParams.buffer[i] += soundList[id].volume * soundParameters[id].data[soundList[id].index + i];
 				}
 
 				// Update sound index

@@ -66,7 +66,10 @@ namespace DrumKit
 			if(dt > trigTime + drum.scanTime && !out)
 			{
 				out = true;
-				mixer.AddToMixer(drum.id);
+
+				float volume = drum.curve[maxVelocity];
+
+				mixer.AddToMixer(drum.id, volume);
 			}
 
 		}

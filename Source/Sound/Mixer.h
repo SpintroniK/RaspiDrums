@@ -31,7 +31,7 @@ namespace Sound
 		virtual ~Mixer();
 
 		void Mix();
-		void AddToMixer(int id);
+		void AddToMixer(int id, float volume);
 
 	private:
 
