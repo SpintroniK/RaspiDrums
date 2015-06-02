@@ -42,6 +42,8 @@ namespace Sound
 		{
 			// The sound is already in the sound list, so we need to rewind it
 			soundList[i].index = 0;
+			// We also have to make sure to play the sound with the new volume
+			soundList[i].volume = volume;
 
 		}
 		else
