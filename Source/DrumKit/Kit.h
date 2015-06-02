@@ -22,6 +22,8 @@ namespace DrumKit
 		std::string drumName;
 		std::string soundFile;
 
+		std::vector<float> curve;
+
 		unsigned int scanTime;
 		short threshold;
 		int maskTime;

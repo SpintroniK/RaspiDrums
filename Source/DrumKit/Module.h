@@ -9,6 +9,8 @@
 #define RASPIDRUMS_SOURCE_DRUMKIT_MODULE_H_
 
 #include "Kit.h"
+#include "Curve.h"
+#include "Curves.h"
 
 #include <libxml/parser.h>
 #include <libxml/tree.h>
@@ -38,6 +40,8 @@ namespace DrumKit
 	private:
 
 		bool GetDrumParams(xmlNode* drumName, std::vector<Drum>& drum);
+		void GetDrumCurve(std::string curveName, std::vector<float>& curve);
+		DrumCurve GetCurveType(std::string curveName);
 		void AddSound(std::string fileLocation, size_t soundId);
 
 		std::string directory;

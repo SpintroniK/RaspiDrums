@@ -134,6 +134,7 @@ namespace DrumKit
 		return;
 	}
 
+
 	bool Module::GetDrumParams(xmlNode* drumName, std::vector<Drum>& drums)
 	{
 
@@ -146,24 +147,63 @@ namespace DrumKit
 		xmlNode* soundFile 	= drumName->next->next;
 		drum.soundFile 		= std::string((char*) soundFile->children->content);
 
-		xmlNode* scanTime	= soundFile->next->next;
-		drum.scanTime 		= (int) std::atoi((char*) scanTime->children->content);
-
-		xmlNode* threshold 	= scanTime->next->next;
+		xmlNode* threshold 	= soundFile->next->next;
 		drum.threshold 		= (short) std::atoi((char*) threshold->children->content);
 
-		xmlNode* maskTime 	= threshold->next->next;
+		xmlNode* scanTime	= threshold->next->next;
+		drum.scanTime 		= (int) std::atoi((char*) scanTime->children->content);
+
+		xmlNode* maskTime 	= scanTime->next->next;
 		drum.maskTime 		= (int) std::atoi((char*) maskTime->children->content);
 
+		xmlNode* curve 		= maskTime->next->next;
+		std::string curveName = std::string((char*) curve->children->content);
+
+		GetDrumCurve(curveName, drum.curve);
 
 		drums.push_back(drum);
 
-		if(scanTime->parent->next->next)
-			*drumName = *scanTime->parent->next->next->children->next;
+		if(curve->parent->next->next)
+			*drumName = *curve->parent->next->next->children->next;
 		else
 			return false;
 
 		return true;
+	}
+
+	DrumCurve Module::GetCurveType(std::string curveName)
+	{
+		// Create map
+		std::map<std::string, DrumCurve> dic;
+
+		// Add definitions to dic
+		dic["exponential"] = DrumCurve::exponential;
+		dic["linear"] = DrumCurve::linear;
+
+		std::map< std::string, DrumCurve>::iterator i = dic.find(curveName);
+
+		if(i != dic.end())
+			return i->second;
+		else
+			return DrumCurve::linear; // Default value
+
+	}
+
+	void Module::GetDrumCurve(std::string curveName, std::vector<float>& curve)
+	{
+
+		DrumCurve drumCurve = GetCurveType(curveName);
+
+		switch(drumCurve)
+		{
+
+		case DrumCurve::exponential: Curves::Exponential(curve);
+			break;
+
+		default: throw - 1;
+		}
+
+		return;
 	}
 
 }

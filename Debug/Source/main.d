@@ -1,6 +1,8 @@
 Source/main.d: ../Source/main.cpp ../Source/Testing/DrumKitTest.h \
  ../Source/Testing/../IO/Sensor.h ../Source/Testing/../DrumKit/Module.h \
- ../Source/Testing/../DrumKit/Kit.h /usr/include/libxml2/libxml/parser.h \
+ ../Source/Testing/../DrumKit/Kit.h ../Source/Testing/../DrumKit/Curve.h \
+ ../Source/Testing/../DrumKit/Curves.h \
+ /usr/include/libxml2/libxml/parser.h \
  /usr/include/libxml2/libxml/xmlversion.h \
  /usr/include/libxml2/libxml/xmlexports.h \
  /usr/include/libxml2/libxml/tree.h \
@@ -36,6 +38,10 @@ Source/main.d: ../Source/main.cpp ../Source/Testing/DrumKitTest.h \
 ../Source/Testing/../DrumKit/Module.h:
 
 ../Source/Testing/../DrumKit/Kit.h:
+
+../Source/Testing/../DrumKit/Curve.h:
+
+../Source/Testing/../DrumKit/Curves.h:
 
 /usr/include/libxml2/libxml/parser.h:
 

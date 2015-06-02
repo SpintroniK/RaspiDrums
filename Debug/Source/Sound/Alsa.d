@@ -1,6 +1,7 @@
 Source/Sound/Alsa.d: ../Source/Sound/Alsa.cpp ../Source/Sound/Alsa.h \
  ../Source/Sound/Mixer.h ../Source/Sound/AlsaParams.h \
  ../Source/Sound/../DrumKit/Module.h ../Source/Sound/../DrumKit/Kit.h \
+ ../Source/Sound/../DrumKit/Curve.h ../Source/Sound/../DrumKit/Curves.h \
  /usr/include/libxml2/libxml/parser.h \
  /usr/include/libxml2/libxml/xmlversion.h \
  /usr/include/libxml2/libxml/xmlexports.h \
@@ -29,6 +30,10 @@ Source/Sound/Alsa.d: ../Source/Sound/Alsa.cpp ../Source/Sound/Alsa.h \
 ../Source/Sound/../DrumKit/Module.h:
 
 ../Source/Sound/../DrumKit/Kit.h:
+
+../Source/Sound/../DrumKit/Curve.h:
+
+../Source/Sound/../DrumKit/Curves.h:
 
 /usr/include/libxml2/libxml/parser.h:
 
