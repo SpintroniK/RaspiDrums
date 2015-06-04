@@ -41,7 +41,7 @@ namespace DrumKit
 	{
 
 		// Data normalisation
-		short v = abs(value - mean);
+		short v = std::abs(value - mean);
 
 		velocity = v;
 
