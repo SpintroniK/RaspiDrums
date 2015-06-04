@@ -9,6 +9,8 @@
 #define MIXER_H_
 
 #include "AlsaParams.h"
+#include "SoundInfo.h"
+
 #include "../DrumKit/Module.h"
 
 #include <vector>
@@ -17,7 +19,6 @@
 #include <chrono>
 #include <iostream>
 #include <mutex>
-#include "SoundInfo.h"
 
 namespace Sound
 {
