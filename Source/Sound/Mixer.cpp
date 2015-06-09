@@ -97,41 +97,12 @@ namespace Sound
 				// Update sound index
 				soundList[id].index += alsaParams.periodSize;
 
-				// Reached the end of the sound sample, so delete it from the vector
-				if(soundList[id].index >= soundParameters[soundId].length)
-				{
-					soundsToDelete.push_back(id);
-				}
 			}
 
-			if(!soundsToDelete.empty())
-			{
-				std::vector<SoundInfo> temp;
-				temp.reserve(soundList.size() - soundsToDelete.size());
-
-				std::sort(soundsToDelete.begin(), soundsToDelete.end());
-
-				std::vector<SoundInfo>::iterator itBlockBegin = soundList.begin();
-
-				for(std::vector<size_t>::iterator it = soundsToDelete.begin(); it != soundsToDelete.end(); ++it)
-				{
-					std::vector<SoundInfo>::iterator itBlockEnd = soundList.begin() + *it;
-					if(itBlockBegin != itBlockEnd)
-					{
-						std::copy(itBlockBegin, itBlockEnd, std::back_inserter(temp));
-					}
-					itBlockBegin = itBlockEnd + 1;
-				}
-
-				// copy last block.
-				if(itBlockBegin != soundList.end())
-				{
-					std::copy(itBlockBegin, soundList.end(), std::back_inserter(temp));
-				}
-
-				soundList.swap(temp);
-
-			}
+			// Delete the sounds that finished playing
+			auto f = [this](SoundInfo sound) { return (sound.index >= soundParameters[sound.id].length); };
+			std::vector<SoundInfo>::iterator n =  std::remove_if(soundList.begin(), soundList.end(), f);
+			soundList.erase(n, soundList.end());
 
 		}
 
