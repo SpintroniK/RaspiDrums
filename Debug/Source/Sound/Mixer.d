@@ -1,7 +1,8 @@
 Source/Sound/Mixer.d: ../Source/Sound/Mixer.cpp ../Source/Sound/Mixer.h \
- ../Source/Sound/AlsaParams.h ../Source/Sound/../DrumKit/Module.h \
- ../Source/Sound/../DrumKit/Kit.h ../Source/Sound/../DrumKit/Curve.h \
- ../Source/Sound/../DrumKit/Curves.h /usr/include/libxml2/libxml/parser.h \
+ ../Source/Sound/AlsaParams.h ../Source/Sound/SoundInfo.h \
+ ../Source/Sound/../DrumKit/Module.h ../Source/Sound/../DrumKit/Kit.h \
+ ../Source/Sound/../DrumKit/Curve.h ../Source/Sound/../DrumKit/Curves.h \
+ /usr/include/libxml2/libxml/parser.h \
  /usr/include/libxml2/libxml/xmlversion.h \
  /usr/include/libxml2/libxml/xmlexports.h \
  /usr/include/libxml2/libxml/tree.h \
@@ -18,11 +19,13 @@ Source/Sound/Mixer.d: ../Source/Sound/Mixer.cpp ../Source/Sound/Mixer.h \
  /usr/include/libxml2/libxml/globals.h /usr/include/libxml2/libxml/SAX.h \
  /usr/include/libxml2/libxml/xlink.h /usr/include/libxml2/libxml/SAX2.h \
  /usr/include/libxml2/libxml/xmlmemory.h \
- /usr/include/libxml2/libxml/threads.h ../Source/Sound/SoundInfo.h
+ /usr/include/libxml2/libxml/threads.h
 
 ../Source/Sound/Mixer.h:
 
 ../Source/Sound/AlsaParams.h:
+
+../Source/Sound/SoundInfo.h:
 
 ../Source/Sound/../DrumKit/Module.h:
 
@@ -73,5 +76,3 @@ Source/Sound/Mixer.d: ../Source/Sound/Mixer.cpp ../Source/Sound/Mixer.h \
 /usr/include/libxml2/libxml/xmlmemory.h:
 
 /usr/include/libxml2/libxml/threads.h:
-
-../Source/Sound/SoundInfo.h:

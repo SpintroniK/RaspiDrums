@@ -23,8 +23,8 @@ Source/main.d: ../Source/main.cpp ../Source/Testing/DrumKitTest.h \
  ../Source/Testing/../DrumKit/Trigger.h \
  ../Source/Testing/../DrumKit/../Sound/Mixer.h \
  ../Source/Testing/../DrumKit/../Sound/AlsaParams.h \
- ../Source/Testing/../DrumKit/../Sound/../DrumKit/Module.h \
  ../Source/Testing/../DrumKit/../Sound/SoundInfo.h \
+ ../Source/Testing/../DrumKit/../Sound/../DrumKit/Module.h \
  ../Source/Testing/../Sound/Alsa.h ../Source/Testing/../Sound/Mixer.h \
  ../Source/Testing/../Sound/AlsaParams.h \
  ../Source/Testing/../Sound/Mixer.h ../Source/Testing/DrumKit_HddTest.h \
@@ -91,9 +91,9 @@ Source/main.d: ../Source/main.cpp ../Source/Testing/DrumKitTest.h \
 
 ../Source/Testing/../DrumKit/../Sound/AlsaParams.h:
 
-../Source/Testing/../DrumKit/../Sound/../DrumKit/Module.h:
-
 ../Source/Testing/../DrumKit/../Sound/SoundInfo.h:
+
+../Source/Testing/../DrumKit/../Sound/../DrumKit/Module.h:
 
 ../Source/Testing/../Sound/Alsa.h:
 
