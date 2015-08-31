@@ -13,12 +13,8 @@
 int main(int argc, char* argv[])
 {
 
-	/* TODO: 	* 	Max velocity != 2048
-	 *
-	 */
-
-	//Testing::DrumKitTest::RunTest();
-	Testing::DrumKit_HddTest::RunTest();
+	Testing::DrumKitTest::RunTest();
+	//Testing::DrumKit_HddTest::RunTest();
 	//Testing::HddSensorTest::RunTest();
 	//Testing::SensorTest::RunTest();
 
