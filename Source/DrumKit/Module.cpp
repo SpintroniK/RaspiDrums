@@ -197,10 +197,13 @@ namespace DrumKit
 		switch(drumCurve)
 		{
 
-		case DrumCurve::exponential: Curves::Exponential(curve);
+		case DrumCurve::exponential:
+				Curves::Exponential(curve);
 			break;
 
-		default: throw - 1;
+		default:
+				Curves::Linear(curve);
+			break;
 		}
 
 		return;
